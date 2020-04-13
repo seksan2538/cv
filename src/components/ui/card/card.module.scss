@@ -1,0 +1,20 @@
+.card {
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+  box-shadow: 0.125rem 0.125rem var(--tertiary-color);
+}
+
+.header {
+  padding: 1rem;
+  background-color: var(--primary-color);
+}
+
+.headerText {
+  margin-bottom: 0;
+  color: var(--dark-color);
+  text-shadow: none;
+}
+
+.body {
+  padding: 1rem;
+}

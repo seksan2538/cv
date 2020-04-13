@@ -1,26 +1,5 @@
-<!--<template>
-  <div :class="$style.content">
-    <app-avatar :class="$style.avatar" class="ml-auto" :src="avatar"></app-avatar>
-    <h1 :class="$style.name" class="text-right text-uppercase text-wrap mt-3">
-      {{ name.first }}
-      <br />
-      {{ name.last }}
-    </h1>
-    <div class="mt-2 text-right text-uppercase">
-      <app-badge>
-        Front-End Developer
-      </app-badge>
-    </div>
-    <p class="mt-3 text-right">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quis minima eligendi
-      repudiandae, sequi dolorum fuga voluptatibus cumque dicta velit?
-    </p>
-  </div>
-</template>-->
-
 <script>
-import AppAvatar from '../ui/AppAvatar'
-import AppBadge from '../ui/AppBadge'
+import { AppAvatar, AppBadge } from '@/components/ui'
 
 export default {
   functional: true,

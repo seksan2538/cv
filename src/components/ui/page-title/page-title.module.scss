@@ -1,0 +1,7 @@
+.text {
+  text-transform: uppercase;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 4rem;
+  }
+}

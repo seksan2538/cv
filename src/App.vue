@@ -25,8 +25,7 @@
 <script>
 import AppLayout from '@/components/layouts/AppLayout'
 import SidebarContent from '@/components/contents/SidebarContent'
-import AppNavbar from '@/components/ui/AppNavbar'
-import AppNavbarItem from '@/components/ui/AppNavbarItem'
+import { AppNavbar, AppNavbarItem } from '@/components/ui/navbar'
 import data from './data.json'
 
 export default {
