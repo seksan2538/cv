@@ -1,5 +1,13 @@
 .card {
   box-shadow: 0.125rem 0.125rem var(--tertiary-color);
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: inherit;
+    }
+  }
 }
 
 .header {

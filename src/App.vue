@@ -77,4 +77,12 @@ h6,
   color: var(--primary-color);
   text-shadow: 0.125rem 0.125rem var(--tertiary-color);
 }
+
+a {
+  color: var(--primary-color);
+
+  &:hover {
+    color: var(--tertiary-color);
+  }
+}
 </style>

@@ -11,13 +11,11 @@
             <p class="mb-0" v-html="item.description"></p>
             <template slot="footer">
               <div class="d-inline-block">
-                <font-awesome-icon icon="medal" />
-                {{ item.position }}
+                <font-awesome-icon class="mr-1" icon="medal" />{{ item.position }}
               </div>
               /
               <div class="d-inline-block">
-                <font-awesome-icon icon="map-marker-alt" />
-                {{ item.location }}
+                <font-awesome-icon class="mr-1" icon="map-marker-alt" />{{ item.location }}
               </div>
             </template>
           </app-card>

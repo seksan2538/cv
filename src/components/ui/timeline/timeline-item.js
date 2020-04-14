@@ -10,7 +10,9 @@ export default {
       <div {...data} class={styles.item}>
         <div class={[styles.itemBody, styles.main]}>{slots().default}</div>
         <div class={styles.itemDivider}></div>
-        <div class={[styles.itemBody, styles.opposite]}>{slots().opposite}</div>
+        {slots().opposite && (
+          <div class={[styles.itemBody, styles.opposite]}>{slots().opposite}</div>
+        )}
       </div>
     )
   },
