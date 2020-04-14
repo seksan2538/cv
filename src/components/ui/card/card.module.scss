@@ -1,11 +1,9 @@
 .card {
-  background-color: var(--secondary-color);
-  color: var(--dark-color);
   box-shadow: 0.125rem 0.125rem var(--tertiary-color);
 }
 
 .header {
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   background-color: var(--primary-color);
 }
 
@@ -17,4 +15,12 @@
 
 .body {
   padding: 1rem;
+  background-color: black;
+  color: var(--light-color);
+}
+
+.footer {
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
 }

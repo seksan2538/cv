@@ -31,16 +31,20 @@
 }
 
 .labelContainer {
-  margin: 0 auto;
-  padding: 0.25rem;
+  padding: 0.25rem 0.5rem;
   background-color: var(--primary-color);
   color: var(--dark-color);
   box-shadow: 0.125rem 0.125rem var(--tertiary-color);
   font-weight: bold;
 
   @include media-breakpoint-up(sm) {
+    margin: 0 auto;
     font-size: 1.5rem;
   }
+}
+
+.itemGroup {
+  padding-bottom: 1rem;
 }
 
 .item {

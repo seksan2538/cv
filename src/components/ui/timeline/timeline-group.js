@@ -1,3 +1,6 @@
+import TimelineLabel from './timeline-label'
+import styles from './timeline.module.scss'
+
 export default {
   functional: true,
 
@@ -10,6 +13,9 @@ export default {
   },
 
   render(h, { props, children }) {
-    return [<AppTimelineLabel>{props.label}</AppTimelineLabel>, <div>{children}</div>]
+    return [
+      <TimelineLabel>{props.label}</TimelineLabel>,
+      <div class={styles.itemGroup}>{children}</div>,
+    ]
   },
 }

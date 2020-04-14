@@ -3,9 +3,6 @@
     <page-title>Education</page-title>
     <app-timeline>
       <app-timeline-item v-for="(item, itemIndex) in items" :key="itemIndex">
-        <template slot="opposite">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, nihil.
-        </template>
         <app-card class="d-inline-block" :title="`${item.yearRange[0]}–${item.yearRange[1]}`">
           <p>
             <strong>{{ item.name }}</strong>
