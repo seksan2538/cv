@@ -3,13 +3,13 @@ import styles from './card.module.scss'
 export default {
   functional: true,
 
-  name: 'Card',
+  name: 'CardTitle',
 
   render(h, { data, children }) {
     return (
-      <div {...data} class={styles.card}>
+      <h4 {...data} class={styles.headerText}>
         {children}
-      </div>
+      </h4>
     )
   },
 }

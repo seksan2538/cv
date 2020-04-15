@@ -3,6 +3,8 @@ import styles from './navbar.module.scss'
 export default {
   functional: true,
 
+  name: 'NavbarItem',
+
   props: {
     to: {
       type: [String, Object],

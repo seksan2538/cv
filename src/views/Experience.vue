@@ -4,12 +4,14 @@
     <app-timeline>
       <app-timeline-group v-for="group in groups" :key="group.label" :label="group.label">
         <app-timeline-item v-for="(item, itemIndex) in group.items" :key="itemIndex">
-          <app-card class="d-inline-block" :title="item.title">
-            <template v-slot:title="title">
-              <span v-html="title"></span>
-            </template>
-            <p class="mb-0" v-html="item.description"></p>
-            <template slot="footer">
+          <app-card class="d-inline-block">
+            <app-card-header>
+              <app-card-title v-html="item.title"></app-card-title>
+            </app-card-header>
+            <app-card-body>
+              <p class="mb-0" v-html="item.description"></p>
+            </app-card-body>
+            <app-card-footer>
               <div class="d-inline-block">
                 <font-awesome-icon class="mr-1" icon="medal" />{{ item.position }}
               </div>
@@ -17,7 +19,7 @@
               <div class="d-inline-block">
                 <font-awesome-icon class="mr-1" icon="map-marker-alt" />{{ item.location }}
               </div>
-            </template>
+            </app-card-footer>
           </app-card>
         </app-timeline-item>
       </app-timeline-group>
@@ -26,7 +28,17 @@
 </template>
 
 <script>
-import { PageTitle, AppTimeline, AppTimelineItem, AppTimelineGroup, AppCard } from '@/components/ui'
+import {
+  PageTitle,
+  AppTimeline,
+  AppTimelineItem,
+  AppTimelineGroup,
+  AppCard,
+  AppCardHeader,
+  AppCardTitle,
+  AppCardBody,
+  AppCardFooter,
+} from '@/components/ui'
 
 export default {
   components: {
@@ -35,6 +47,10 @@ export default {
     AppTimelineItem,
     AppTimelineGroup,
     AppCard,
+    AppCardHeader,
+    AppCardTitle,
+    AppCardBody,
+    AppCardFooter,
   },
 
   data() {

@@ -1,0 +1,16 @@
+.gauge {
+  display: flex;
+  margin: 0 -0.25rem;
+}
+
+.blockWrapper {
+  flex: 1 1 auto;
+  height: 1rem;
+  padding: 0 0.25rem;
+}
+
+.block {
+  width: 100%;
+  height: 100%;
+  border: solid 0.0625rem transparent;
+}

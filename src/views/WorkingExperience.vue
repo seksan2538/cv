@@ -4,18 +4,28 @@
     <app-timeline>
       <app-timeline-item>
         <app-card class="d-inline-block" title="???">
-          <p class="mb-0">Coming soon...</p>
+          <app-card-header>
+            <app-card-title>???</app-card-title>
+          </app-card-header>
+          <app-card-body>
+            <p class="mb-0">Coming soon...</p>
+          </app-card-body>
         </app-card>
       </app-timeline-item>
       <app-timeline-item v-for="(item, itemIndex) in items" :key="itemIndex">
-        <app-card class="d-inline-block" :title="item.title">
-          <p class="mb-0">{{ item.position }}</p>
-          <template slot="footer">
+        <app-card class="d-inline-block">
+          <app-card-header>
+            <app-card-title>{{ item.title }}</app-card-title>
+          </app-card-header>
+          <app-card-body>
+            <p class="mb-0">{{ item.position }}</p>
+          </app-card-body>
+          <app-card-footer>
             <div class="d-inline-block">
               <font-awesome-icon class="mr-2" icon="map-marker-alt" />
               <a :href="item.website" target="_blank">{{ item.location }}</a>
             </div>
-          </template>
+          </app-card-footer>
         </app-card>
       </app-timeline-item>
     </app-timeline>
@@ -23,7 +33,16 @@
 </template>
 
 <script>
-import { PageTitle, AppTimeline, AppTimelineItem, AppCard } from '@/components/ui'
+import {
+  PageTitle,
+  AppTimeline,
+  AppTimelineItem,
+  AppCard,
+  AppCardHeader,
+  AppCardTitle,
+  AppCardBody,
+  AppCardFooter,
+} from '@/components/ui'
 
 export default {
   components: {
@@ -31,6 +50,10 @@ export default {
     AppTimeline,
     AppTimelineItem,
     AppCard,
+    AppCardHeader,
+    AppCardTitle,
+    AppCardBody,
+    AppCardFooter,
   },
 
   data() {

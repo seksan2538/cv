@@ -1,7 +1,9 @@
 .text {
   text-transform: uppercase;
+  margin-bottom: 1rem;
 
   @include media-breakpoint-up(sm) {
     font-size: 4rem;
+    margin-bottom: 1.5rem;
   }
 }

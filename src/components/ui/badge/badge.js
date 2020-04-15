@@ -3,6 +3,8 @@ import styles from './badge.module.scss'
 export default {
   functional: true,
 
+  name: 'Badge',
+
   props: {
     variant: {
       type: String,

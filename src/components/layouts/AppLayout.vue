@@ -12,9 +12,7 @@ export default {
           </b-container>
         </aside>
         <main class={$style.main}>
-          <b-container fluid class="py-3">
-            {slots().default}
-          </b-container>
+          <b-container class="py-3">{slots().default}</b-container>
         </main>
       </div>
     )

@@ -3,6 +3,8 @@ import styles from './avatar.module.scss'
 export default {
   functional: true,
 
+  name: 'Avatar',
+
   props: {
     src: {
       type: String,
