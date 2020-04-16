@@ -1,59 +1,52 @@
 <template>
   <div>
-    <page-title>Working Experience</page-title>
-    <app-timeline>
-      <app-timeline-item>
-        <app-card class="d-inline-block" title="???">
-          <app-card-header>
-            <app-card-title>???</app-card-title>
-          </app-card-header>
-          <app-card-body>
+    <PageTitle>Working Experience</PageTitle>
+    <Timeline>
+      <TimelineItem>
+        <Card class="d-inline-block" title="???">
+          <CardHeader>
+            <CardTitle>???</CardTitle>
+          </CardHeader>
+          <CardBody>
             <p class="mb-0">Coming soon...</p>
-          </app-card-body>
-        </app-card>
-      </app-timeline-item>
-      <app-timeline-item v-for="(item, itemIndex) in items" :key="itemIndex">
-        <app-card class="d-inline-block">
-          <app-card-header>
-            <app-card-title>{{ item.title }}</app-card-title>
-          </app-card-header>
-          <app-card-body>
+          </CardBody>
+        </Card>
+      </TimelineItem>
+      <TimelineItem v-for="(item, itemIndex) in items" :key="itemIndex">
+        <Card class="d-inline-block">
+          <CardHeader>
+            <CardTitle>{{ item.title }}</CardTitle>
+          </CardHeader>
+          <CardBody>
             <p class="mb-0">{{ item.position }}</p>
-          </app-card-body>
-          <app-card-footer>
+          </CardBody>
+          <CardFooter>
             <div class="d-inline-block">
               <font-awesome-icon class="mr-2" icon="map-marker-alt" />
               <a :href="item.website" target="_blank">{{ item.location }}</a>
             </div>
-          </app-card-footer>
-        </app-card>
-      </app-timeline-item>
-    </app-timeline>
+          </CardFooter>
+        </Card>
+      </TimelineItem>
+    </Timeline>
   </div>
 </template>
 
 <script>
-import {
-  PageTitle,
-  AppTimeline,
-  AppTimelineItem,
-  AppCard,
-  AppCardHeader,
-  AppCardTitle,
-  AppCardBody,
-  AppCardFooter,
-} from '@/components/ui'
+import { PageTitle } from '@/components/ui/page-title'
+import { Card, CardHeader, CardTitle, CardBody, CardFooter } from '@/components/ui/card'
+import { Timeline, TimelineItem } from '@/components/ui/timeline'
 
 export default {
   components: {
     PageTitle,
-    AppTimeline,
-    AppTimelineItem,
-    AppCard,
-    AppCardHeader,
-    AppCardTitle,
-    AppCardBody,
-    AppCardFooter,
+    Timeline,
+    TimelineItem,
+    Card,
+    CardHeader,
+    CardTitle,
+    CardBody,
+    CardFooter,
   },
 
   data() {

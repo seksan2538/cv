@@ -1,18 +1,18 @@
 .card {
-  box-shadow: 0.125rem 0.125rem var(--tertiary-color);
-
-  a {
-    color: inherit;
-
-    &:hover {
-      color: inherit;
-    }
-  }
+  box-shadow: 0.125rem 0.125rem var(--primary-color-darker);
 }
 
 .header {
   padding: 0.5rem 1rem;
   background-color: var(--primary-color);
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
 }
 
 .headerText {
@@ -23,12 +23,20 @@
 
 .body {
   padding: 1rem;
-  background-color: black;
+  background-color: var(--dark-color-darker);
   color: var(--light-color);
 }
 
 .footer {
   padding: 0.5rem 1rem;
-  background-color: var(--secondary-color);
-  color: var(--dark-color);
+  background-color: var(--dark-color-lighter);
+  color: var(--light-color);
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
 }

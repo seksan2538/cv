@@ -9,27 +9,25 @@
       >Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime laboriosam fuga dolore?
       Delectus rem ad nihil provident sequi, voluptatibus mollitia.</sidebar-content
     >
-    <app-navbar slot="navbar">
-      <app-navbar-item to="/" icon="user">Me</app-navbar-item>
-      <app-navbar-item to="/education" icon="user-graduate">Education</app-navbar-item>
-      <app-navbar-item to="/experience" icon="history">Experience</app-navbar-item>
-      <app-navbar-item to="/working-experience" icon="briefcase"
-        >Working Experience</app-navbar-item
-      >
-      <app-navbar-item to="/skills" icon="star">Skills</app-navbar-item>
-    </app-navbar>
+    <Navbar slot="navbar">
+      <NavbarItem to="/" icon="user">Me</NavbarItem>
+      <NavbarItem to="/education" icon="user-graduate">Education</NavbarItem>
+      <NavbarItem to="/experience" icon="history">Experience</NavbarItem>
+      <NavbarItem to="/working-experience" icon="briefcase">Working Experience</NavbarItem>
+      <NavbarItem to="/skills" icon="star">Skills</NavbarItem>
+    </Navbar>
     <router-view />
   </app-layout>
 </template>
 
 <script>
-import AppLayout from '@/components/layouts/AppLayout'
-import SidebarContent from '@/components/contents/SidebarContent'
-import { AppNavbar, AppNavbarItem } from '@/components/ui/navbar'
+import AppLayout from '@/components/layout/AppLayout'
+import SidebarContent from '@/components/content/SidebarContent'
+import { Navbar, NavbarItem } from '@/components/layout/navbar'
 import data from './data.json'
 
 export default {
-  components: { AppLayout, SidebarContent, AppNavbar, AppNavbarItem },
+  components: { AppLayout, SidebarContent, Navbar, NavbarItem },
 
   data() {
     return { ...data }
@@ -49,10 +47,13 @@ export default {
 
 :root {
   --primary-color: #{$primary-color};
-  --secondary-color: #{$secondary-color};
-  --tertiary-color: #{$tertiary-color};
+  --primary-color-darker: #{$primary-color-darker};
+  --accent-color: #{$accent-color};
+  --accent-color-darker: #{$accent-color-darker};
   --light-color: #{$light-color};
   --dark-color: #{$dark-color};
+  --dark-color-darker: #{$dark-color-darker};
+  --dark-color-lighter: #{$dark-color-lighter};
 }
 
 body {
@@ -75,14 +76,37 @@ h6,
 .h6 {
   font-weight: bold;
   color: var(--primary-color);
-  text-shadow: 0.125rem 0.125rem var(--tertiary-color);
+  text-shadow: 0.125rem 0.125rem var(--accent-color-darker);
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--accent-color);
 
   &:hover {
-    color: var(--tertiary-color);
+    color: var(--primary-color);
+  }
+}
+
+blockquote {
+  padding: 1rem 1rem 1rem 1.25rem;
+  position: relative;
+
+  @include media-breakpoint-up(sm) {
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0.25rem;
+    background-color: var(--accent-color);
+    box-shadow: 0.125rem 0.125rem var(--accent-color-darker);
   }
 }
 </style>

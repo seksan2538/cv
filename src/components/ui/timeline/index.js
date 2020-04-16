@@ -1,6 +1,6 @@
-import AppTimeline from './timeline'
-import AppTimelineGroup from './timeline-group'
-import AppTimelineItem from './timeline-item'
-import AppTimelineLabel from './timeline-label'
+import Timeline from './timeline'
+import TimelineGroup from './timeline-group'
+import TimelineItem from './timeline-item'
+import TimelineLabel from './timeline-label'
 
-export { AppTimeline, AppTimelineGroup, AppTimelineItem, AppTimelineLabel }
+export { Timeline, TimelineGroup, TimelineItem, TimelineLabel }

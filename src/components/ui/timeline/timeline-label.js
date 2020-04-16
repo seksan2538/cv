@@ -7,9 +7,9 @@ export default {
 
   render(h, { data, children }) {
     return (
-      <h3 {...data} class={styles.label}>
+      <div {...data} class={styles.label}>
         <div class={styles.labelContainer}>{children}</div>
-      </h3>
+      </div>
     )
   },
 }

@@ -1,5 +1,6 @@
 <script>
-import { AppAvatar, AppBadge } from '@/components/ui'
+import { Avatar } from '../ui/avatar'
+import { Badge } from '../ui/badge'
 
 export default {
   functional: true,
@@ -22,14 +23,14 @@ export default {
   render(h, { data, props, slots, $style }) {
     return (
       <div {...data} class={$style.content}>
-        <AppAvatar class={[$style.avatar, 'ml-auto']} src={props.avatarSrc} />
+        <Avatar class={[$style.avatar, 'ml-auto']} src={props.avatarSrc} />
         <h1 class={[$style.name, 'text-right', 'text-uppercase', 'text-wrap', 'mt-3']}>
           {props.firstname}
           <br />
           {props.lastname}
         </h1>
         <div class={['mt-2', 'text-right', 'text-uppercase']}>
-          <AppBadge>{props.position}</AppBadge>
+          <Badge>{props.position}</Badge>
         </div>
         <p class={['mt-3', 'text-right']}>{slots().default}</p>
       </div>

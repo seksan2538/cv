@@ -1,53 +1,50 @@
 <template>
   <div>
-    <page-title>Skills</page-title>
+    <PageTitle>Skills</PageTitle>
     <h3>Technical</h3>
     <b-row class="mb-4">
       <b-col v-for="(item, itemIndex) in technicalSkills" :key="itemIndex" class="mb-3" :sm="4">
-        <app-card :style="{ boxShadow: `0.125rem 0.125rem ${item.color}` }">
-          <app-card-body>
-            <app-card-title class="mb-2" :style="{ color: item.color }">{{
-              item.title
-            }}</app-card-title>
-            <app-gauge
+        <Card :style="{ boxShadow: `0.125rem 0.125rem ${item.color}` }">
+          <CardBody>
+            <CardTitle class="mb-2" :style="{ color: item.color }">{{ item.title }}</CardTitle>
+            <Gauge
               :max="maxGauge"
               :value="item.value"
               :color="item.color"
               :border-color="item.color"
             />
-          </app-card-body>
-        </app-card>
+          </CardBody>
+        </Card>
       </b-col>
     </b-row>
     <h3>Non-Technical</h3>
     <b-row class="mb-4">
       <b-col v-for="(item, itemIndex) in nonTechnicalSkills" :key="itemIndex" class="mb-3" :sm="4">
-        <app-card>
-          <app-card-body>
-            <app-card-title class="mb-2" :style="{ color: 'white' }">{{
-              item.title
-            }}</app-card-title>
-            <app-gauge :max="maxGauge" :value="item.value" />
-          </app-card-body>
-        </app-card>
+        <Card>
+          <CardBody>
+            <CardTitle class="mb-2" :style="{ color: 'white' }">{{ item.title }}</CardTitle>
+            <Gauge :max="maxGauge" :value="item.value" />
+          </CardBody>
+        </Card>
       </b-col>
     </b-row>
   </div>
 </template>
 
 <script>
-import Color from 'color'
-import { PageTitle, AppGauge, AppCard, AppCardTitle, AppCardBody } from '@/components/ui'
+import { Card, CardTitle, CardBody } from '@/components/ui/card'
+import { Gauge } from '@/components/ui/gauge'
+import { PageTitle } from '@/components/ui/page-title'
 
 export default {
   name: 'Skills',
 
   components: {
     PageTitle,
-    AppGauge,
-    AppCard,
-    AppCardTitle,
-    AppCardBody,
+    Gauge,
+    Card,
+    CardTitle,
+    CardBody,
   },
 
   data() {

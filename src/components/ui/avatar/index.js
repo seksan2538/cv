@@ -1,3 +1,3 @@
-import AppAvatar from './avatar'
+import Avatar from './avatar'
 
-export { AppAvatar }
+export { Avatar }

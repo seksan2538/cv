@@ -1,3 +1,3 @@
-import AppBadge from './badge'
+import Badge from './badge'
 
-export { AppBadge }
+export { Badge }

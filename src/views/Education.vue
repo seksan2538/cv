@@ -1,44 +1,38 @@
 <template>
   <div>
-    <page-title>Education</page-title>
-    <app-timeline>
-      <app-timeline-item v-for="(item, itemIndex) in items" :key="itemIndex">
-        <app-card class="d-inline-block">
-          <app-card-header>
-            <app-card-title>{{ item.yearRange[0] }}–{{ item.yearRange[1] }}</app-card-title>
-          </app-card-header>
-          <app-card-body>
+    <PageTitle>Education</PageTitle>
+    <Timeline>
+      <TimelineItem v-for="(item, itemIndex) in items" :key="itemIndex">
+        <Card class="d-inline-block">
+          <CardHeader>
+            <CardTitle>{{ item.yearRange[0] }}–{{ item.yearRange[1] }}</CardTitle>
+          </CardHeader>
+          <CardBody>
             <p>
               <strong>{{ item.name }}</strong>
             </p>
             <p class="mb-0">GPA: {{ item.gpa }}</p>
-          </app-card-body>
-        </app-card>
-      </app-timeline-item>
-    </app-timeline>
+          </CardBody>
+        </Card>
+      </TimelineItem>
+    </Timeline>
   </div>
 </template>
 
 <script>
-import {
-  PageTitle,
-  AppTimeline,
-  AppTimelineItem,
-  AppCard,
-  AppCardHeader,
-  AppCardTitle,
-  AppCardBody,
-} from '@/components/ui'
+import { PageTitle } from '@/components/ui/page-title'
+import { Card, CardHeader, CardTitle, CardBody } from '@/components/ui/card'
+import { Timeline, TimelineItem } from '@/components/ui/timeline'
 
 export default {
   components: {
     PageTitle,
-    AppTimeline,
-    AppTimelineItem,
-    AppCard,
-    AppCardHeader,
-    AppCardTitle,
-    AppCardBody,
+    Timeline,
+    TimelineItem,
+    Card,
+    CardHeader,
+    CardTitle,
+    CardBody,
   },
 
   data() {

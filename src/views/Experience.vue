@@ -1,17 +1,17 @@
 <template>
   <div>
-    <page-title>Experience</page-title>
-    <app-timeline>
-      <app-timeline-group v-for="group in groups" :key="group.label" :label="group.label">
-        <app-timeline-item v-for="(item, itemIndex) in group.items" :key="itemIndex">
-          <app-card class="d-inline-block">
-            <app-card-header>
-              <app-card-title v-html="item.title"></app-card-title>
-            </app-card-header>
-            <app-card-body>
+    <PageTitle>Experience</PageTitle>
+    <Timeline>
+      <TimelineGroup v-for="group in groups" :key="group.label" :label="group.label">
+        <TimelineItem v-for="(item, itemIndex) in group.items" :key="itemIndex">
+          <Card class="d-inline-block">
+            <CardHeader>
+              <CardTitle v-html="item.title"></CardTitle>
+            </CardHeader>
+            <CardBody>
               <p class="mb-0" v-html="item.description"></p>
-            </app-card-body>
-            <app-card-footer>
+            </CardBody>
+            <CardFooter>
               <div class="d-inline-block">
                 <font-awesome-icon class="mr-1" icon="medal" />{{ item.position }}
               </div>
@@ -19,38 +19,30 @@
               <div class="d-inline-block">
                 <font-awesome-icon class="mr-1" icon="map-marker-alt" />{{ item.location }}
               </div>
-            </app-card-footer>
-          </app-card>
-        </app-timeline-item>
-      </app-timeline-group>
-    </app-timeline>
+            </CardFooter>
+          </Card>
+        </TimelineItem>
+      </TimelineGroup>
+    </Timeline>
   </div>
 </template>
 
 <script>
-import {
-  PageTitle,
-  AppTimeline,
-  AppTimelineItem,
-  AppTimelineGroup,
-  AppCard,
-  AppCardHeader,
-  AppCardTitle,
-  AppCardBody,
-  AppCardFooter,
-} from '@/components/ui'
+import { PageTitle } from '@/components/ui/page-title'
+import { Card, CardHeader, CardTitle, CardBody, CardFooter } from '@/components/ui/card'
+import { Timeline, TimelineItem, TimelineGroup } from '@/components/ui/timeline'
 
 export default {
   components: {
     PageTitle,
-    AppTimeline,
-    AppTimelineItem,
-    AppTimelineGroup,
-    AppCard,
-    AppCardHeader,
-    AppCardTitle,
-    AppCardBody,
-    AppCardFooter,
+    Timeline,
+    TimelineItem,
+    TimelineGroup,
+    Card,
+    CardHeader,
+    CardTitle,
+    CardBody,
+    CardFooter,
   },
 
   data() {

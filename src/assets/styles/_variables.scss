@@ -1,5 +1,8 @@
 $primary-color: #dcff00;
-$secondary-color: #00dcff;
-$tertiary-color: #ff00dc;
-$light-color: #ffffff;
+$primary-color-darker: scale-color($primary-color, $lightness: -25%, $saturation: -25%);
+$accent-color: #ff00dd;
+$accent-color-darker: scale-color($accent-color, $lightness: -25%, $saturation: -25%);
+$light-color: #e5e5e5;
 $dark-color: #1a1a1a;
+$dark-color-darker: scale-color($dark-color, $lightness: -25%);
+$dark-color-lighter: scale-color($dark-color, $lightness: 25%);

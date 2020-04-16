@@ -1,4 +1,4 @@
-import AppGauge from './gauge'
-import AppGaugeBlock from './gauge-block'
+import Gauge from './gauge'
+import GaugeBlock from './gauge-block'
 
-export { AppGauge, AppGaugeBlock }
+export { Gauge, GaugeBlock }
