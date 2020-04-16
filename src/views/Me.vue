@@ -1,14 +1,14 @@
 <template>
   <div>
-    <PageTitle>Me</PageTitle>
-    <blockquote>
+    <PageTitle>About Me</PageTitle>
+    <Quote>
       <p
         v-for="(quote, quoteIndex) in quotes"
         :key="quoteIndex"
         :class="{ 'mb-0': quoteIndex === quotes.length - 1 }"
         v-html="quote"
       ></p>
-    </blockquote>
+    </Quote>
     <b-row class="mb-3">
       <b-col :md="6" class="mb-3 mb-md-0">
         <Card>
@@ -52,12 +52,12 @@
           <CardBody>
             <b-row class="text-center" :style="{ marginBottom: '-1rem' }">
               <b-col v-for="(item, itemIndex) in contactItems" :key="itemIndex" class="pb-3">
-                <a :href="item.link" target="_blank">
+                <Link :href="item.link" target="_blank" class="d-block">
                   <IconSign>
                     <IconSignIcon :icon="item.icon" size="3x" />
                     <IconSignText>{{ item.text }}</IconSignText>
                   </IconSign>
-                </a>
+                </Link>
               </b-col>
             </b-row>
           </CardBody>
@@ -71,11 +71,11 @@
           <CardBody>
             <b-row class="text-center" :style="{ marginBottom: '-1rem' }">
               <b-col v-for="(item, itemIndex) in socialNetworks" :key="itemIndex" class="pb-3">
-                <a :href="item.link" target="_blank">
+                <Link :href="item.link" target="_blank" class="d-block">
                   <IconSign>
                     <IconSignIcon :icon="item.icon" size="3x" />
                   </IconSign>
-                </a>
+                </Link>
               </b-col>
             </b-row>
           </CardBody>
@@ -89,6 +89,8 @@
 import { IconSign, IconSignIcon, IconSignText } from '@/components/content/icon-sign'
 import { Card, CardHeader, CardTitle, CardBody } from '@/components/ui/card'
 import { PageTitle } from '@/components/ui/page-title'
+import { Quote } from '@/components/ui/quote'
+import { Link } from '@/components/ui/link'
 
 export default {
   name: 'Me',
@@ -102,13 +104,15 @@ export default {
     IconSign,
     IconSignIcon,
     IconSignText,
+    Quote,
+    Link,
   },
 
   data() {
     return {
       quotes: [
-        "I love about coding because I need to challenge with difficulty that comes from either known or unknown things. I've been interested about web development for several years and this is on my way because I want to make online world to be colorful.",
-        "Starting for learning something maybe hard sometime, but I won't give up because nothing is impossible.",
+        "An introvert person who loves about coding because I want to challenge with difficulties. I've been interested about web development for several years and this is on my way because I want to make online world to be colorful.",
+        "Start to learning something maybe hard sometime, but I won't give up because nothing is impossible.",
       ],
       infoItems: [
         {

@@ -1,3 +1,4 @@
+import { Heading } from '../heading'
 import styles from './page-title.module.scss'
 
 export default {
@@ -7,9 +8,9 @@ export default {
 
   render(h, { data, children }) {
     return (
-      <h2 {...data} class={styles.text}>
+      <Heading {...data} level={2} class={styles.text}>
         {children}
-      </h2>
+      </Heading>
     )
   },
 }

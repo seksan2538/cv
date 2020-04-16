@@ -6,6 +6,7 @@ export default {
   name: 'GaugeBlock',
 
   props: {
+    active: Boolean,
     color: {
       type: String,
       default: 'var(--primary-color)',
@@ -21,7 +22,7 @@ export default {
       <div class={styles.blockWrapper}>
         <div
           {...data}
-          class={styles.block}
+          class={[styles.block, { [styles.active]: props.active }]}
           style={{ backgroundColor: props.color, borderColor: props.borderColor }}
         ></div>
       </div>

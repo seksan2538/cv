@@ -10,9 +10,9 @@
         :sm="6"
         :md="4"
       >
-        <Card :style="{ boxShadow: `0.125rem 0.125rem ${item.color}` }">
+        <Card>
           <CardBody>
-            <CardTitle class="mb-2" :style="{ color: item.color }">{{ item.title }}</CardTitle>
+            <div class="mb-1">{{ item.title }}</div>
             <Gauge
               :max="maxGauge"
               :value="item.value"
@@ -34,7 +34,7 @@
       >
         <Card>
           <CardBody>
-            <CardTitle class="mb-2" :style="{ color: 'white' }">{{ item.title }}</CardTitle>
+            <div class="mb-1">{{ item.title }}</div>
             <Gauge :max="maxGauge" :value="item.value" />
           </CardBody>
         </Card>
@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import { Card, CardTitle, CardBody } from '@/components/ui/card'
+import { Card, CardBody } from '@/components/ui/card'
 import { Gauge } from '@/components/ui/gauge'
 import { PageTitle } from '@/components/ui/page-title'
 
@@ -55,7 +55,6 @@ export default {
     PageTitle,
     Gauge,
     Card,
-    CardTitle,
     CardBody,
   },
 
@@ -125,12 +124,12 @@ export default {
         },
         {
           title: 'RESTful',
-          color: '#ffffff',
+          color: '#bfbfbf',
           value: 4,
         },
         {
           title: 'Responsive Design',
-          color: '#ffffff',
+          color: '#bfbfbf',
           value: 4,
         },
         {
@@ -140,7 +139,7 @@ export default {
         },
         {
           title: 'Unit Testing',
-          color: '#ffffff',
+          color: '#bfbfbf',
           value: 1,
         },
       ],

@@ -1,3 +1,4 @@
+import { Heading } from '../heading'
 import styles from './card.module.scss'
 
 export default {
@@ -7,9 +8,9 @@ export default {
 
   render(h, { data, children }) {
     return (
-      <h4 {...data} class={styles.headerText}>
+      <Heading {...data} level={4} class={styles.headerText}>
         {children}
-      </h4>
+      </Heading>
     )
   },
 }

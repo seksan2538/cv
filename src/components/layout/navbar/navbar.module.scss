@@ -2,12 +2,17 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  height: 4rem;
+  min-height: 4rem;
   display: flex;
-  background-color: rgba($accent-color, 0.5);
-  backdrop-filter: blur(0.5rem);
+  background-color: var(--accent-color);
   white-space: nowrap;
-  overflow-x: auto;
+  overflow: auto hidden;
+  box-shadow: 0 0 1rem rgba(black, 0.1);
+
+  @supports (backdrop-filter: blur(0.5rem)) {
+    background-color: rgba($accent-color, 0.75);
+    backdrop-filter: blur(0.5rem);
+  }
 }
 
 .item {
@@ -41,6 +46,9 @@
 
   &:hover {
     color: var(--light-color);
+  }
+
+  &:global(.router-link-active) {
     &::before {
       width: 100%;
       opacity: 1;
@@ -50,6 +58,7 @@
 
 .container {
   z-index: 1;
+  overflow: hidden;
 }
 
 .icon {
@@ -59,4 +68,11 @@
 
 .label {
   margin-top: 0.25rem;
+  display: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include media-breakpoint-up(sm) {
+    display: block;
+  }
 }

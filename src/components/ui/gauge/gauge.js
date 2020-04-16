@@ -22,6 +22,7 @@ export default {
     for (let i = 0; i < props.max; i++) {
       blocks.push(
         <GaugeBlock
+          active={i < props.value}
           color={i < props.value ? props.color : null}
           borderColor={props.borderColor}
         ></GaugeBlock>

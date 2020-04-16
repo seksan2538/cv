@@ -1,0 +1,24 @@
+.content {
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    text-align: right;
+  }
+}
+
+.avatar {
+  width: 10rem;
+}
+
+.name {
+  text-shadow: none;
+  color: inherit;
+
+  @include media-breakpoint-down(xs) {
+    font-size: 7vw;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 1.75vw;
+  }
+}
