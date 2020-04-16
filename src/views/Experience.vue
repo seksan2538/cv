@@ -45,6 +45,10 @@ export default {
     CardFooter,
   },
 
+  metaInfo: {
+    title: 'Experience',
+  },
+
   data() {
     return {
       groups: [

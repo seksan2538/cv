@@ -49,6 +49,10 @@ export default {
     CardFooter,
   },
 
+  metaInfo: {
+    title: 'Working Experience',
+  },
+
   data() {
     return {
       items: [

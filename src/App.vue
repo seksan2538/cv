@@ -28,6 +28,10 @@ import data from './data.json'
 export default {
   components: { MainLayout, SidebarContent, Navbar, NavbarItem },
 
+  metaInfo: {
+    titleTemplate: '%s - Seksan Neramitthanasombat',
+  },
+
   data() {
     return { ...data }
   },

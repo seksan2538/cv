@@ -108,6 +108,10 @@ export default {
     Link,
   },
 
+  metaInfo: {
+    title: 'About Me',
+  },
+
   data() {
     return {
       quotes: [

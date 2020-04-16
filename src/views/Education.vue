@@ -35,6 +35,10 @@ export default {
     CardBody,
   },
 
+  metaInfo: {
+    title: 'Education',
+  },
+
   data() {
     return {
       items: [

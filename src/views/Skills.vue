@@ -58,6 +58,10 @@ export default {
     CardBody,
   },
 
+  metaInfo: {
+    title: 'Skills',
+  },
+
   data() {
     return {
       maxGauge: 5,
