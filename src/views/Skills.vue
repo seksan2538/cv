@@ -1,7 +1,7 @@
 <template>
   <div>
     <PageTitle>Skills</PageTitle>
-    <h3>Technical</h3>
+    <Heading :level="3">Technical</Heading>
     <b-row class="mb-4">
       <b-col
         v-for="(item, itemIndex) in technicalSkills"
@@ -47,6 +47,7 @@
 import { Card, CardBody } from '@/components/ui/card'
 import { Gauge } from '@/components/ui/gauge'
 import { PageTitle } from '@/components/ui/page-title'
+import { Heading } from '@/components/ui/heading'
 
 export default {
   name: 'Skills',
@@ -56,6 +57,7 @@ export default {
     Gauge,
     Card,
     CardBody,
+    Heading,
   },
 
   metaInfo: {
