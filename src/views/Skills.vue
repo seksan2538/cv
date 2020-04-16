@@ -3,7 +3,13 @@
     <PageTitle>Skills</PageTitle>
     <h3>Technical</h3>
     <b-row class="mb-4">
-      <b-col v-for="(item, itemIndex) in technicalSkills" :key="itemIndex" class="mb-3" :sm="4">
+      <b-col
+        v-for="(item, itemIndex) in technicalSkills"
+        :key="itemIndex"
+        class="mb-3"
+        :sm="6"
+        :md="4"
+      >
         <Card :style="{ boxShadow: `0.125rem 0.125rem ${item.color}` }">
           <CardBody>
             <CardTitle class="mb-2" :style="{ color: item.color }">{{ item.title }}</CardTitle>
@@ -19,7 +25,13 @@
     </b-row>
     <h3>Non-Technical</h3>
     <b-row class="mb-4">
-      <b-col v-for="(item, itemIndex) in nonTechnicalSkills" :key="itemIndex" class="mb-3" :sm="4">
+      <b-col
+        v-for="(item, itemIndex) in nonTechnicalSkills"
+        :key="itemIndex"
+        class="mb-3"
+        :sm="6"
+        :md="4"
+      >
         <Card>
           <CardBody>
             <CardTitle class="mb-2" :style="{ color: 'white' }">{{ item.title }}</CardTitle>
@@ -70,6 +82,11 @@ export default {
           title: 'TypeScript',
           color: '#007acc',
           value: 3,
+        },
+        {
+          title: 'Node.js',
+          color: '#026e00',
+          value: 2,
         },
         {
           title: 'PHP',
