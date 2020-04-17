@@ -23,7 +23,7 @@
         </Card>
       </b-col>
     </b-row>
-    <h3>Non-Technical</h3>
+    <Heading :level="3">Non-Technical</Heading>
     <b-row class="mb-4">
       <b-col
         v-for="(item, itemIndex) in nonTechnicalSkills"

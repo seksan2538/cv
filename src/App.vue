@@ -2,7 +2,7 @@
   <MainLayout>
     <SidebarContent
       slot="sidebar"
-      :avatar-src="`${$publicPath}images/avatar.jpg`"
+      :avatar-src="require('@/assets/images/avatar.jpg')"
       firstname="Seksan"
       lastname="Neramitthanasombat"
       position="Front-End Developer"

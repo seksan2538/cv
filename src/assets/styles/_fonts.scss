@@ -2,12 +2,12 @@
   font-family: 'Jost';
   font-style: normal;
   font-weight: normal;
-  src: url('/fonts/jost/Jost400Book.woff') format('woff');
+  src: url('~@/assets/fonts/Jost400Book.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Jost';
   font-style: normal;
   font-weight: bold;
-  src: url('/fonts/jost/Jost700Bold.woff') format('woff');
+  src: url('~@/assets/fonts/Jost700Bold.woff') format('woff');
 }
