@@ -32,6 +32,10 @@ const routes = [
     name: 'Skills',
     component: () => import(/* webpackChunkName: "skills" */ '../views/Skills.vue'),
   },
+  {
+    path: '*',
+    redirect: '/',
+  },
 ]
 
 const router = new VueRouter({
