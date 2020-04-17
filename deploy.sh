@@ -4,9 +4,7 @@
 set -e
 
 # build
-export NODE_ENV=production
-npm run build
-export NODE_ENV=
+NODE_ENV=production npm run build
 
 # navigate into the build output directory
 cd dist

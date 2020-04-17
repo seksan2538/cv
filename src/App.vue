@@ -29,39 +29,6 @@ export default {
 
   metaInfo: {
     titleTemplate: '%s - Seksan Neramitthanasombat',
-    meta: [
-      { vmid: 'description', name: 'description', content: "A Seksan Neramitthanasombat's CV" },
-      {
-        vmid: 'keywords',
-        name: 'keywords',
-        content: ['seksan', 'neramitthanasombat', 'nekomania420', 'cv', 'resume'],
-      },
-      {
-        vmid: 'robots',
-        name: 'robots',
-        content: ['index', 'follow'],
-      },
-      {
-        vmid: 'og:url',
-        property: 'og:url',
-        content: location.origin,
-      },
-      {
-        vmid: 'og:title',
-        property: 'og:title',
-        content: 'Seksan Neramitthanasombat',
-      },
-      {
-        vmid: 'og:description',
-        property: 'og:description',
-        content: "A Seksan Neramitthanasombat's CV",
-      },
-      {
-        vmid: 'og:image',
-        property: 'og:image',
-        content: location.origin + require('@/assets/images/avatar.jpg'),
-      },
-    ],
   },
 }
 </script>
