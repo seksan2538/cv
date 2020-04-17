@@ -2,7 +2,7 @@
   <MainLayout>
     <SidebarContent
       slot="sidebar"
-      avatar-src="/images/avatar.jpg"
+      :avatar-src="`${$publicPath}images/avatar.jpg`"
       firstname="Seksan"
       lastname="Neramitthanasombat"
       position="Front-End Developer"
@@ -23,17 +23,12 @@
 import { MainLayout } from '@/components/layout/main-layout'
 import { SidebarContent } from '@/components/content/sidebar-content'
 import { Navbar, NavbarItem } from '@/components/layout/navbar'
-import data from './data.json'
 
 export default {
   components: { MainLayout, SidebarContent, Navbar, NavbarItem },
 
   metaInfo: {
     titleTemplate: '%s - Seksan Neramitthanasombat',
-  },
-
-  data() {
-    return { ...data }
   },
 }
 </script>
