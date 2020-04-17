@@ -12,6 +12,6 @@ export default {
   },
 
   render(h, { data, props }) {
-    return <img {...data} class={styles.avatar} src={props.src} />
+    return <img {...data} class={styles.avatar} src={props.src} alt="Avatar" />
   },
 }
